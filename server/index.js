@@ -10,7 +10,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "https://livepoll-assignment.vercel.app/"],
     methods: ["GET", "POST"]
   }
 });
@@ -136,6 +136,16 @@ setInterval(() => {
     }
   }
 }, 600000);
+
+const path = require('path');
+
+// Serve static files from the React build
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+// Handle React routing, return all requests to React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+});
 
 // Basic route to check if server is running
 app.get('/', (req, res) => {
