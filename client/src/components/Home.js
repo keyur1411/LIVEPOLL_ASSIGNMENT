@@ -5,7 +5,7 @@ import io from 'socket.io-client';
 import '../styles/Home.css';
 
 // Socket connection
-const socket = io('process.env.REACT_APP_SERVER_URL');
+const socket = io('https://livepoll-assignment.onrender.com');
 
 function Home() {
   const navigate = useNavigate();
