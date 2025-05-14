@@ -1,0 +1,157 @@
+/* client/src/styles/PollRoom.css */
+.poll-room-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.poll-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.poll-header h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.room-info {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  color: #7f8c8d;
+}
+
+.timer {
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  color: #e74c3c;
+  display: inline-block;
+}
+
+.poll-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.poll-option {
+  padding: 1.25rem;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.poll-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.poll-option.selected {
+  border: 2px solid #3498db;
+  background-color: #ebf5fb;
+}
+
+.option-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.option-header h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.vote-count {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  height: 12px;
+  background-color: #ecf0f1;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress {
+  height: 100%;
+  background-color: #3498db;
+  transition: width 0.5s ease;
+}
+
+.percentage {
+  text-align: right;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.poll-status {
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.voted-message {
+  color: #27ae60;
+  font-size: 1.1rem;
+}
+
+.poll-ended {
+  color: #e74c3c;
+}
+
+.poll-ended h3 {
+  margin-bottom: 0.5rem;
+}
+
+.instruction {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.total-votes {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #7f8c8d;
+}
+
+.btn-exit {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.btn-exit:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 600px) {
+  .poll-room-container {
+    padding: 1.5rem;
+  }
+  
+  .room-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
