@@ -5,11 +5,7 @@ import io from 'socket.io-client';
 import '../styles/PollRoom.css';
 
 // Socket connection
-<<<<<<< HEAD
 const socket = io('https://livepoll-assignment-1gf5.vercel.app/');
-=======
-const socket = io('process.env.REACT_APP_SERVER_URL');
->>>>>>> Deployementbranch
 
 function PollRoom() {
   const { roomId } = useParams();
