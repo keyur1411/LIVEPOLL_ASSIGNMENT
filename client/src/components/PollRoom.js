@@ -5,7 +5,7 @@ import io from 'socket.io-client';
 import '../styles/PollRoom.css';
 
 // Socket connection
-const socket = io('https://livepoll-assignment-1gf5.vercel.app/');
+const socket = io('http://localhost:5000/');
 
 function PollRoom() {
   const { roomId } = useParams();
